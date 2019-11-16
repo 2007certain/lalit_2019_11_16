@@ -1,0 +1,25 @@
+#title {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-width: 350px;
+  width: 350px;
+}
+
+.btn {
+  padding: 5px 15px;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+.generate {
+  background-color: aqua;
+}
+
+.insert {
+  background-color: brown;
+}
