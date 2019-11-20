@@ -23,10 +23,22 @@ var inter = setInterval(function () {
     xhttp.send();
 }, 1000);
 
-function generateRandomCanvas(){
-    console.log("working");
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * ((max + 1) - min)) + min;
 }
 
-function insertToCanvas(){
-    console.log("working!!");
+function generateRandomCanvas() {
+    document.getElementById("canvasContainer").innerHTML = '';
+    for (let i = 0; i < getRandomInt(2, 5); i++) {
+        let canvas = document.createElement('canvas');
+        canvas.setAttribute("id", i);
+        document.getElementById("canvasContainer").appendChild(canvas);
+    }
+}
+
+function insertToCanvas() {
+    let select = document.getElementById("title");
+    let option = select.options[select.selectedIndex];
+    let filterPhoto = photosData.filter(photo => photo.id === Number(option.value))[0];
+    console.log(filterPhoto.thumbnailUrl);
 }
