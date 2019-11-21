@@ -24,8 +24,15 @@
   background-color: brown;
 }
 
-.canvasContainer canvas{
+#canvasContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#canvasContainer > *{
   border: 1px solid #ccc;
-  min-height: 250px;
-  min-width: 250px;
+  flex: 1;
+  height: 500px;
+  margin: 5px;
+  width: 100%;
 }
